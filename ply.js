@@ -138,13 +138,13 @@ const {Ply, PlyElement, PlyProperty} = (function () {
      * Structure for ply files, .ply as string loader (TODO: and writer)
      */
     class Ply {
-        constructor(modelFile) {
+        constructor(plyString) {
             this.schema = [];
             this.model = {};
             this.comments = [];
 
-            if (modelFile) {
-                this.read(modelFile);
+            if (plyString) {
+                this.read(plyString);
             }
         }
 
